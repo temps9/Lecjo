@@ -1,0 +1,31 @@
+{
+
+  "description": "Play audio file dna",
+  "manifest_version": 2,
+  "name": "Lecjo",
+  "version": "2.0.0.2",
+
+  "homepage_url": "http://www.letime.net/lecjo/jo.html",
+  "icons": {
+    "48": "icons/lecjo-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "lecjo@mozilla.org",
+      "strict_min_version": "45.0"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dna.js"]
+    }
+  ]
+
+}
