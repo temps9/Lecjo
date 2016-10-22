@@ -15,22 +15,22 @@ The values entered in the HTML page, are used to control the different acoustic 
 # detail construction lecjo
 The adn.js file, see if each open HTML page contains data, called "donne1". If data, called "donne1" are in an HTML page, dna.js uses it to generate sounds.
 # Construction Example
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-<body>
-<input type="number" id="donne1" value="220" style="display: none;">
-<input type="number" id="donne2" value="100" style="display: none;">
-<input type="number" id="donne9" value="30" style="display: none;">
-<input type="number" id="donne10" value="100" style="display: none;">
-<input type="number" id="donne11" value="2" style="display: none;">
-<input type="number" id="donne71" value="220" style="display: none;">
-<h3>Generates sound :</h3>
-<button id="tet1">start generator</button><br><br>
-                   <a href="mailto:temps.jo@gmail.com">Contact et support: Joris Abadie</a>
-<br><br>
-  <div id='basewave1'> </div>
-</body>
-</html>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+&lt;input type="number" id="donne1" value="220" style="display: none;"&gt;
+&lt;input type="number" id="donne2" value="100" style="display: none;"&gt;
+&lt;input type="number" id="donne9" value="30" style="display: none;"&gt;
+&lt;input type="number" id="donne10" value="100" style="display: none;"&gt;
+&lt;input type="number" id="donne11" value="2" style="display: none;"&gt;
+&lt;input type="number" id="donne71" value="220" style="display: none;"&gt;
+&lt;h3&gt;Generates sound :&lt;/h3&gt;
+&lt;button id="tet1"&gt;start generator&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+                   &lt;a href="mailto:temps.jo@gmail.com"&gt;Contact et support: Joris Abadie&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+  &lt;div id='basewave1'&gt; &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
