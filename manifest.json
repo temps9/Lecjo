@@ -3,7 +3,7 @@
   "description": "Play audio file dna",
   "manifest_version": 2,
   "name": "Lecjo",
-  "version": "2.0.0.2",
+  "version": "2.0.0.4",
 
   "homepage_url": "http://www.letime.net/lecjo/jo.html",
   "icons": {

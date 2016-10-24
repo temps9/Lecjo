@@ -344,8 +344,11 @@ function ajouteElement() {
 
   nouveauaudio1 =  document.createElement("audio");
 nouveauaudio1.setAttribute("id", "audiojoa");
+nouveauaudio1.setAttribute("autoplay", "autoplay");
 nouveauaudio1.setAttribute("controls", "controls");
+nouveauaudio1.setAttribute("loop", "loop");
 nouveauaudio1.setAttribute("autobuffer", " ");
+
 
   // ajoute l'élément qui vient d'être créé et son contenu au DOM
 
@@ -2169,11 +2172,5 @@ lecjoa1(FichierAudioJo);
     }
 /****************************fin premier niveau qui ouvre le fichier*****************************************************/
 
-
-
-/**passerelle firefox 48 pour remplacer le bouton d'appel js**/
-
-	var el = document.getElementById("tet1"); 
-	el.addEventListener("click", lecjoadn, false); 
-
+lecjoadn();
 
