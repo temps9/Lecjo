@@ -17,20 +17,139 @@ The adn.js file, see if each open HTML page contains data, called "donne1". If d
 # Construction Example
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-  &lt;/head&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
 &lt;body&gt;
-&lt;input type="number" id="donne1" value="220" style="display: none;"&gt;
-&lt;input type="number" id="donne2" value="100" style="display: none;"&gt;
-&lt;input type="number" id="donne9" value="30" style="display: none;"&gt;
-&lt;input type="number" id="donne10" value="100" style="display: none;"&gt;
-&lt;input type="number" id="donne11" value="2" style="display: none;"&gt;
-&lt;input type="number" id="donne71" value="220" style="display: none;"&gt;
-&lt;h3&gt;Generates sound :&lt;/h3&gt;
-&lt;button id="tet1"&gt;start generator&lt;/button&gt;&lt;br&gt;&lt;br&gt;
-                   &lt;a href="mailto:temps.jo@gmail.com"&gt;Contact et support: Joris Abadie&lt;/a&gt;
+&lt;a href="mailto:temps.jo@gmail.com"&gt;Contact et support: Joris Abadie&lt;/a&gt;
 &lt;br&gt;&lt;br&gt;
-  &lt;div id='basewave1'&gt; &lt;/div&gt;
+&lt;div id='basewave1'&gt; &lt;/div&gt;
+&lt;script type="text/javascript" src="adn.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+
+adn.js
+
+var donne = [1, 220, 100, 0, 0, 0, 0, 0, 0, 30,
+100, 2, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 200, 0, 0,];
+
+
+for(var i= 0; i < 75; i++)
+{
+var nouveauinput;
+function ajouteElemen() {
+// crée un nouvel élément input
+var body   = document.body || document.getElementsByTagName('body')[0],
+nouveauinput  =  document.createElement("input");
+nouveauinput.setAttribute("type", "number");
+nouveauinput.setAttribute("id", ("donne"+i));
+nouveauinput.setAttribute("value", donne[i]);
+nouveauinput.setAttribute("style", "display: none;");
+// ajoute l'élément qui vient d'être créé et son contenu au DOM
+body.insertBefore(nouveauinput,body.childNodes[0]);
+console.log("donne"+i);
+console.log(donne[i]);
+}  
+ajouteElemen();
+}
+
+The values in the HTML page
+
+indication:
+44100 unit width is equal to 1 second.
+The man can not hear over 40 musical notes per second.
+
+number of repetitions of the total form : donne71
+number of Wave front: donne11
+Wave front 1
+Wave front 1 height : donne1
+Wave front 1 width: donne2
+Wave front 1 height repeat: donne3
+Wave front 1 width for height stays in place:: donne4
+Wave front 1 number of stays in place: donne72
+Wave front 1 height variation: donne5
+Wave front 1 limit of the height variation: donne6
+Wave front 1 width variation: donne7
+Wave front 1 limit of the width variation: donne8
+
+Wave front 2
+Wave front 2 height : donne9
+Wave front 2 width:donne10
+Wave front 2 width for height stays in place: donne12
+Wave front 2 number of stays in place: donne73
+Wave front 2 height variation: donne13
+Wave front 2 limit of the height variation: donne14
+Wave front 2 width variation: donne15
+Wave front 2 limit of the width variation: donne16
+
+Wave front 3
+Wave front 3 height repeat: donne17
+Wave front 3 height : donne18
+Wave front 3 width: donne19
+Wave front 3 height repeat: donne20
+Wave front 3 width for height stays in place: donne21
+Wave front 3 height variation: donne22
+Wave front 3 limit of the height variation: donne23
+Wave front 3 width variation: donne24
+Wave front 3 limit of the width variation: donne25
+
+Wave front 4
+Activation du mode Wave front 4 en position 1: donne26
+Wave front 4 height : donne27
+Wave front 4 width: donne28
+Wave front 4 height repeat: donne29
+Wave front 4 width for height stays in place:donne30
+Wave front 4 height variation: donne31
+limit of the height variation: donne32
+width variation: donne33
+limit of the width variation: donne34
+
+Wave front 5
+Activation du mode Wave front 5 en position 1: donne35
+height : donne36
+width: donne37
+height repeat: donne38
+width for height stays in place: donne39
+height variation: donne40
+limit of the height variation: donne41
+width variation: donne42
+limit of the width variation: donne43
+
+Wave front 6
+Activation du mode Wave front 6 en position 1: donne44
+height : donne45
+width: donne46
+height repeat: donne47
+width for height stays in place: donne48
+height variation: donne49
+limit of the height variation: donne50
+width variation: donne51
+limit of the width variation: donne52
+
+Make surfing an audio
+Activation du mode surf en position 1: donne53
+height : donne54
+width:donne55
+height repeat:donne56
+width for height stays in place: donne57
+height variation: donne58
+limit of the height variation: donne59
+width variation: donne60
+limit of the width variation: donne61
+
+Final inertia manager
+Activation du mode inertia en position 1: done62
+height : donne63
+width: donne64
+height repeat: donne65
+width for height stays in place: donne66
+height variation: donne67
+limit of the height variation: donne68
+width variation: donne69
+limit of the width variation: donne70
