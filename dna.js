@@ -1,5 +1,5 @@
 
-/*****************debut adaptateur.js**********/
+/*****************debut adaptateur.js****permet de dire que c'est de l'audio******/
 var monhexa, NbPtTotal = 0;
 var raw = [];
 var raw1 = [];
@@ -141,7 +141,7 @@ var app = {};
 
 
 
-/*********************************************************************************/
+/*******************************************************************************************************/
 
 /* mes tables de generations*/
 
@@ -287,7 +287,7 @@ var table =
     [tab1jo17, tab2jo17, tab3jo17, tab4jo17, tab5jo17, tab6jo17, tab7jo17,tab8jo17, tab9jo17, tab10jo17, tab11jo17, tab12jo17, tab13jo17, tab14jo17, tab15jo17,tab16jo17, tab17jo17, tab18jo17, tab19jo17, tab20jo17, tab21jo17, tab22jo17,tab23jo17, tab24jo17, tab25jo17, tab26jo17, tab27jo17, tab28jo17, tab29jo17,tab30jo17, tab31jo17, tab32jo17, tab33jo17, tab34jo17, tab35jo17, tab36jo17,tab37jo17, tab38jo17, tab39jo17, tab40jo17, tab41jo17, tab42jo17, tab43jo17,tab44jo17, tab45jo17, tab46jo17, tab47jo17, tab48jo17, tab49jo17, tab50jo17,tab51jo17, tab52jo17, tab53jo17, tab54jo17, tab55jo17, tab56jo17, tab57jo17,tab58jo17, tab59jo17, tab60jo17, tab61jo17, tab62jo17, tab63jo17, tab64jo17,tab65jo17, tab66jo17, tab67jo17, tab68jo17, tab69jo17, tab70jo17, tab71jo17,tab72jo17, tab73jo17, tab74jo17, tab75jo17, tab76jo17, tab77jo17, tab78jo17,tab79jo17, tab80jo17, tab81jo17, tab82jo17, tab83jo17, tab84jo17, tab85jo17,tab86jo17, tab87jo17, tab88jo17, tab89jo17, tab90jo17, tab91jo17, tab92jo17,tab93jo17, tab94jo17, tab95jo17, tab96jo17, tab97jo17, tab98jo17, tab99jo17,tab100jo17, tab101jo17, tab102jo17, tab103jo17, tab104jo17, tab105jo17, tab106jo17,tab107jo17, tab108jo17, tab109jo17, tab110jo17, tab111jo17, tab112jo17, tab113jo17,tab114jo17, tab115jo17, tab116jo17, tab117jo17, tab118jo17, tab119jo17, tab120jo17,tab121jo17, tab122jo17, tab123jo17, tab124jo17, tab125jo17, tab126jo17, tab127jo17,tab128jo17];
 
 
-/****************************************************************/
+/***************************fin des tables de generation*************************************/
 
 			var FichierAudioJo=[];
 			var FichierAudioJox=[];
@@ -299,22 +299,7 @@ var lenommeur1 ;
 
 
 
-
-
-/*********************************deuxième partie*********************************************************************************/
-
-
-/********************************fin deuxième partie******/
-
-
-
-/***********troisième partie**********application qui met aux normes audio actuelles*********/
-
-
-/******fin de la troisième partie**encodeur aux normes audio*************************/
-
-
-/***********cinquième partie génère la balise et lance la lecture**************/
+/***********troisieme partie génère la balise et lance la lecture**************/
 
 
 
@@ -331,8 +316,7 @@ levariateur = levariateur + 1;
 
 
 lenommeur = lenommeur1.concat(levariateur); 
-switch(levariateur) {
-    case 2:
+
 
 //zone 1
 var mon_audio1 = null;
@@ -365,291 +349,6 @@ ajouteElement();
 
 //fin zone 1
 
-        break;
-    case 3:
-//zone 2
-var mon_audio2 = null;
-var nouveauaudio2 = null;
-var nouveauaudio2a = null;
-
-
-function ajouteElement1() {
-  // crée un nouvel élément audio
-
-  nouveauaudio2 =  document.createElement("audio");
-nouveauaudio2.setAttribute("id", "audiojoa1");
-nouveauaudio2.setAttribute("controls", "controls");
-nouveauaudio2.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio2a = document.createElement("source");
-
-
-  nouveauaudio2a.setAttribute("src", "data:audio/wav;basewave3,");
-   nouveauaudio2.appendChild(nouveauaudio2a);
-  mon_audio2 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio2, mon_audio2);
-
-}  
-
-ajouteElement1();
-
-//fin zone 2
-        break;
-    case 4:
-//zone 3
-var mon_audio3 = null;
-var nouveauaudio3 = null;
-var nouveauaudio3a = null;
-
-function ajouteElement2() {
-  // crée un nouvel élément audio
-
-  nouveauaudio3 =  document.createElement("audio");
-nouveauaudio3.setAttribute("id", "audiojoa2");
-nouveauaudio3.setAttribute("controls", "controls");
-nouveauaudio3.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio3a = document.createElement("source");
-
-
-  nouveauaudio3a.setAttribute("src", "data:audio/wav;basewave4,");
-   nouveauaudio3.appendChild(nouveauaudio3a);
-  mon_audio3 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio3, mon_audio3);
-
-}  
-ajouteElement2();
-        break;
-//fin zone 3
-//zone 4
-    case 5:
-var mon_audio4 = null;
-var nouveauaudio4 = null;
-var nouveauaudio4a = null;
-
-function ajouteElement3() {
-  // crée un nouvel élément audio
-
-  nouveauaudio4 =  document.createElement("audio");
-nouveauaudio4.setAttribute("id", "audiojoa3");
-nouveauaudio4.setAttribute("controls", "controls");
-nouveauaudio4.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio4a = document.createElement("source");
-
-
-  nouveauaudio4a.setAttribute("src", "data:audio/wav;basewave5,");
-   nouveauaudio4.appendChild(nouveauaudio4a);
-  mon_audio4 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio4, mon_audio4);
-
-}  
-ajouteElement3();
-        break;
-//fin zone 4
-/***/
-    case 6:
-//zone 5
-var mon_audio5 = null;
-var nouveauaudio5 = null;
-var nouveauaudio5a = null;
-
-function ajouteElement4() {
-  // crée un nouvel élément audio
-
-  nouveauaudio5 =  document.createElement("audio");
-nouveauaudio5.setAttribute("id", "audiojoa4");
-nouveauaudio5.setAttribute("controls", "controls");
-nouveauaudio5.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio5a = document.createElement("source");
-
-
-  nouveauaudio5a.setAttribute("src", "data:audio/wav;basewave6,");
-   nouveauaudio5.appendChild(nouveauaudio5a);
-  mon_audio5 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio5, mon_audio5);
-
-}  
-ajouteElement4();
-
-
-//fin zone 5
-
-        break;
-/***/
-    case 7:
-//zone 6
-var mon_audio6 = null;
-var nouveauaudio6 = null;
-var nouveauaudio6a = null;
-
-function ajouteElement5() {
-  // crée un nouvel élément audio
-
-  nouveauaudio6 =  document.createElement("audio");
-nouveauaudio6.setAttribute("id", "audiojoa5");
-nouveauaudio6.setAttribute("controls", "controls");
-nouveauaudio6.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio6a = document.createElement("source");
-
-
-  nouveauaudio6a.setAttribute("src", "data:audio/wav;basewave7,");
-   nouveauaudio6.appendChild(nouveauaudio6a);
-  mon_audio6 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio6, mon_audio6);
-
-}  
-ajouteElement5();
-
-
-//fin zone 6
-
-        break;
-/***/
-    case 8:
-//zone 7
-var mon_audio7 = null;
-var nouveauaudio7 = null;
-var nouveauaudio7a = null;
-
-function ajouteElement6() {
-  // crée un nouvel élément audio
-
-  nouveauaudio7 =  document.createElement("audio");
-nouveauaudio7.setAttribute("id", "audiojoa6");
-nouveauaudio7.setAttribute("controls", "controls");
-nouveauaudio7.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio7a = document.createElement("source");
-
-
-  nouveauaudio7a.setAttribute("src", "data:audio/wav;basewave8,");
-   nouveauaudio7.appendChild(nouveauaudio7a);
-  mon_audio7 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio7, mon_audio7);
-
-}  
-ajouteElement6();
-
-
-//fin zone 7
-
-        break;
-/***/
-
-    case 9:
-//zone 8
-var mon_audio8 = null;
-var nouveauaudio8 = null;
-var nouveauaudio8a = null;
-
-function ajouteElement7() {
-  // crée un nouvel élément audio
-
-  nouveauaudio8 =  document.createElement("audio");
-nouveauaudio8.setAttribute("id", "audiojoa7");
-nouveauaudio8.setAttribute("controls", "controls");
-nouveauaudio8.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio8a = document.createElement("source");
-
-
-  nouveauaudio8a.setAttribute("src", "data:audio/wav;basewave9,");
-   nouveauaudio8.appendChild(nouveauaudio8a);
-  mon_audio8 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio8, mon_audio8);
-
-}  
-ajouteElement7();
-
-
-//fin zone 8
-
-        break;
-/***/
-
-    case 10:
-//zone 9
-var mon_audio9 = null;
-var nouveauaudio9 = null;
-var nouveauaudio9a = null;
-
-function ajouteElement8() {
-  // crée un nouvel élément audio
-
-  nouveauaudio9 =  document.createElement("audio");
-nouveauaudio9.setAttribute("id", "audiojoa8");
-nouveauaudio9.setAttribute("controls", "controls");
-nouveauaudio9.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio9a = document.createElement("source");
-
-
-  nouveauaudio9a.setAttribute("src", "data:audio/wav;basewave10,");
-   nouveauaudio9.appendChild(nouveauaudio9a);
-  mon_audio9 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio9, mon_audio9);
-
-}  
-ajouteElement8();
-
-
-//fin zone 9
-
-        break;
-/***/
-
-    default:
-//zone 10
-var mon_audio10 = null;
-var nouveauaudio10 = null;
-var nouveauaudio10a = null;
-
-function ajouteElement9() {
-  // crée un nouvel élément audio
-
-  nouveauaudio10 =  document.createElement("audio");
-nouveauaudio10.setAttribute("id", "audiojoa9");
-nouveauaudio10.setAttribute("controls", "controls");
-nouveauaudio10.setAttribute("autobuffer", " ");
-
-  // ajoute l'élément qui vient d'être créé et son contenu au DOM
-
- nouveauaudio10a = document.createElement("source");
-
-
-  nouveauaudio10a.setAttribute("src", "data:audio/wav;basewave11,");
-   nouveauaudio10.appendChild(nouveauaudio10a);
-  mon_audio10 = document.getElementById(lenommeur);
-  document.body.insertBefore(nouveauaudio10, mon_audio10);
-
-}  
-ajouteElement9();
-
-
-//fin zone 10
-
-} // fin switch
-
-
 
 
 
@@ -678,110 +377,11 @@ sessionStorage.setItem("MaMemoireAudio","lenommeur")
 //var wave1 = sessionStorage.getItem("MaMemoireAudio");
 
 
-switch(levariateur) {
-    case 2:
 var audio = document.getElementById("audiojoa");
 var source = document.createElement("source");
 source.setAttribute("src", lenommeur);
 audio.appendChild(source);
-        break;
-    case 3:
-var audio1 = document.getElementById("audiojoa1");
-var source1 = document.createElement("source");
-source1.setAttribute("src", lenommeur);
-audio1.appendChild(source1);
-        break;
-    case 4:
-var audio2 = document.getElementById("audiojoa2");
-var source2 = document.createElement("source");
-source2.setAttribute("src", lenommeur);
-audio2.appendChild(source2);
-        break;
-    case 5:
-var audio3 = document.getElementById("audiojoa3");
-var source3 = document.createElement("source");
-source3.setAttribute("src", lenommeur);
-audio3.appendChild(source3);
-        break;
 
-    case 6:
-var audio4 = document.getElementById("audiojoa4");
-var source4 = document.createElement("source");
-source4.setAttribute("src", lenommeur);
-audio4.appendChild(source4);
-        break;
-
-    case 7:
-var audio5 = document.getElementById("audiojoa5");
-var source5 = document.createElement("source");
-source5.setAttribute("src", lenommeur);
-audio5.appendChild(source5);
-        break;
-
-    case 8:
-var audio6 = document.getElementById("audiojoa6");
-var source6 = document.createElement("source");
-source6.setAttribute("src", lenommeur);
-audio6.appendChild(source6);
-        break;
-
-    case 9:
-var audio7 = document.getElementById("audiojoa7");
-var source7 = document.createElement("source");
-source7.setAttribute("src", lenommeur);
-audio7.appendChild(source7);
-        break;
-
-    case 10:
-var audio8 = document.getElementById("audiojoa8");
-var source8 = document.createElement("source");
-source8.setAttribute("src", lenommeur);
-audio8.appendChild(source8);
-        break;
-
-    case 11:
-var audio9 = document.getElementById("audiojoa9");
-var source9 = document.createElement("source");
-source9.setAttribute("src", lenommeur);
-audio9.appendChild(source9);
-        break;
-    case 12:
-var audio10 = document.getElementById("audiojoa10");
-var source10 = document.createElement("source");
-source10.setAttribute("src", lenommeur);
-audio10.appendChild(source10);
-        break;
-    case 13:
-var audio11 = document.getElementById("audiojoa11");
-var source11 = document.createElement("source");
-source11.setAttribute("src", lenommeur);
-audio11.appendChild(source11);
-        break;
-    case 14:
-var audio12 = document.getElementById("audiojoa12");
-var source12 = document.createElement("source");
-source12.setAttribute("src", lenommeur);
-audio12.appendChild(source12);
-        break;
-    case 15:
-var audio13 = document.getElementById("audiojoa13");
-var source13 = document.createElement("source");
-source13.setAttribute("src", lenommeur);
-audio13.appendChild(source13);
-        break;
-    case 16:
-var audio14 = document.getElementById("audiojoa14");
-var source14 = document.createElement("source");
-source14.setAttribute("src", lenommeur);
-audio14.appendChild(source14);
-        break;
-
-    default:
-var audio15 = document.getElementById("audiojoa15");
-var source15 = document.createElement("source");
-source15.setAttribute("src", lenommeur);
-audio15.appendChild(source15);
-} 
 
 
 
@@ -1017,6 +617,15 @@ return NbPtTotal;
   
 
 function lecjoadn() {
+
+	var donne74 = document.getElementById("donne74").value;
+
+var pas;
+for (pas = 0; pas < donne74; pas++) {
+
+
+switch(pas) {
+    case 0:
 	var donne1 = document.getElementById("donne1").value;
 	var donne2 = document.getElementById("donne2").value;
 	var donne3 = document.getElementById("donne3").value;
@@ -1090,6 +699,85 @@ function lecjoadn() {
 	var donne71 = document.getElementById("donne71").value;
 	var donne72 = document.getElementById("donne72").value;
 	var donne73 = document.getElementById("donne73").value;
+        break;
+
+    case 1:
+	var donne1 = document.getElementById("donna1").value;
+	var donne2 = document.getElementById("donna2").value;
+	var donne3 = document.getElementById("donna3").value;
+	var donne4 = document.getElementById("donna4").value;
+	var donne5 = document.getElementById("donna5").value;
+	var donne6 = document.getElementById("donna6").value;
+	var donne7 = document.getElementById("donna7").value;
+	var donne8 = document.getElementById("donna8").value;
+	var donne9 = document.getElementById("donna9").value;
+	var donne10 = document.getElementById("donna10").value;
+	var donne11 = document.getElementById("donna11").value;
+	var donne12 = document.getElementById("donna12").value;
+	var donne13 = document.getElementById("donna13").value;
+	var donne14 = document.getElementById("donna14").value;
+	var donne15 = document.getElementById("donna15").value;
+	var donne16 = document.getElementById("donna16").value;
+	var donne17 = document.getElementById("donna17").value;
+	var donne18 = document.getElementById("donna18").value;
+	var donne19 = document.getElementById("donna19").value;
+	var donne20 = document.getElementById("donna20").value;
+	var donne21 = document.getElementById("donna21").value;
+	var donne22 = document.getElementById("donna22").value;
+	var donne23 = document.getElementById("donna23").value;
+	var donne24 = document.getElementById("donna24").value;
+	var donne25 = document.getElementById("donna25").value;
+	var donne26 = document.getElementById("donna26").value;
+	var donne27 = document.getElementById("donna27").value;
+	var donne28 = document.getElementById("donna28").value;
+	var donne29 = document.getElementById("donna29").value;
+	var donne30 = document.getElementById("donna30").value;
+	var donne31 = document.getElementById("donna31").value;
+	var donne32 = document.getElementById("donna32").value;
+	var donne33 = document.getElementById("donna33").value;
+	var donne34 = document.getElementById("donna34").value;
+	var donne35 = document.getElementById("donna35").value;
+	var donne36 = document.getElementById("donna36").value;
+	var donne37 = document.getElementById("donna37").value;
+	var donne38 = document.getElementById("donna38").value;
+	var donne39 = document.getElementById("donna39").value;
+	var donne40 = document.getElementById("donna40").value;
+	var donne41 = document.getElementById("donna41").value;
+	var donne42 = document.getElementById("donna42").value;
+	var donne43 = document.getElementById("donna43").value;
+	var donne44 = document.getElementById("donna44").value;
+	var donne45 = document.getElementById("donna45").value;
+	var donne46 = document.getElementById("donna46").value;
+	var donne47 = document.getElementById("donna47").value;
+	var donne48 = document.getElementById("donna48").value;
+	var donne49 = document.getElementById("donna49").value;
+	var donne50 = document.getElementById("donna50").value;
+	var donne51 = document.getElementById("donna51").value;
+	var donne52 = document.getElementById("donna52").value;
+	var donne53 = document.getElementById("donna53").value;
+	var donne54 = document.getElementById("donna54").value;
+	var donne55 = document.getElementById("donna55").value;
+	var donne56 = document.getElementById("donna56").value;
+	var donne57 = document.getElementById("donna57").value;
+	var donne58 = document.getElementById("donna58").value;
+	var donne59 = document.getElementById("donna59").value;
+	var donne60 = document.getElementById("donna60").value;
+	var donne61 = document.getElementById("donna61").value;
+	var donne62 = document.getElementById("donna62").value;
+	var donne63 = document.getElementById("donna63").value;
+	var donne64 = document.getElementById("donna64").value;
+	var donne65 = document.getElementById("donna65").value;
+	var donne66 = document.getElementById("donna66").value;
+	var donne67 = document.getElementById("donna67").value;
+	var donne68 = document.getElementById("donna68").value;
+	var donne69 = document.getElementById("donna69").value;
+	var donne70 = document.getElementById("donna70").value;
+	var donne71 = document.getElementById("donna71").value;
+	var donne72 = document.getElementById("donna72").value;
+	var donne73 = document.getElementById("donna73").value;
+        break;
+
+}//fin switch pas ; lecture des differents sons a generer
 
 var le1 = donne1;//variation amplitude front1
 function maFonction() {
@@ -2165,6 +1853,12 @@ FichierAudioJo.push(donne46);
 				}//fin donne11 == 6
 
 //fin zone 6 fronts
+
+}// fin de la boucle du nombre de sons différents
+
+
+
+
 
 FichierAudioJo = FichierAudioJo.map(Number);
 lecjoa1(FichierAudioJo);
