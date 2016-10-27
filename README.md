@@ -153,3 +153,5 @@ height variation: donne67
 limit of the height variation: donne68
 width variation: donne69
 limit of the width variation: donne70
+
+donne70 Number of generated sound forms
