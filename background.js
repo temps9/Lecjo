@@ -1078,6 +1078,82 @@ switch(pas) {
 	var donne73 = document.getElementById("donnf73").value;
         break;
 
+    case 6:
+	var donne1 = document.getElementById("donng1").value;
+	var donne2 = document.getElementById("donng2").value;
+	var donne3 = document.getElementById("donng3").value;
+	var donne4 = document.getElementById("donng4").value;
+	var donne5 = document.getElementById("donng5").value;
+	var donne6 = document.getElementById("donng6").value;
+	var donne7 = document.getElementById("donng7").value;
+	var donne8 = document.getElementById("donng8").value;
+	var donne9 = document.getElementById("donng9").value;
+	var donne10 = document.getElementById("donng10").value;
+	var donne11 = document.getElementById("donng11").value;
+	var donne12 = document.getElementById("donng12").value;
+	var donne13 = document.getElementById("donng13").value;
+	var donne14 = document.getElementById("donng14").value;
+	var donne15 = document.getElementById("donng15").value;
+	var donne16 = document.getElementById("donng16").value;
+	var donne17 = document.getElementById("donng17").value;
+	var donne18 = document.getElementById("donng18").value;
+	var donne19 = document.getElementById("donng19").value;
+	var donne20 = document.getElementById("donng20").value;
+	var donne21 = document.getElementById("donng21").value;
+	var donne22 = document.getElementById("donng22").value;
+	var donne23 = document.getElementById("donng23").value;
+	var donne24 = document.getElementById("donng24").value;
+	var donne25 = document.getElementById("donng25").value;
+	var donne26 = document.getElementById("donng26").value;
+	var donne27 = document.getElementById("donng27").value;
+	var donne28 = document.getElementById("donng28").value;
+	var donne29 = document.getElementById("donng29").value;
+	var donne30 = document.getElementById("donng30").value;
+	var donne31 = document.getElementById("donng31").value;
+	var donne32 = document.getElementById("donng32").value;
+	var donne33 = document.getElementById("donng33").value;
+	var donne34 = document.getElementById("donng34").value;
+	var donne35 = document.getElementById("donng35").value;
+	var donne36 = document.getElementById("donng36").value;
+	var donne37 = document.getElementById("donng37").value;
+	var donne38 = document.getElementById("donng38").value;
+	var donne39 = document.getElementById("donng39").value;
+	var donne40 = document.getElementById("donng40").value;
+	var donne41 = document.getElementById("donng41").value;
+	var donne42 = document.getElementById("donng42").value;
+	var donne43 = document.getElementById("donng43").value;
+	var donne44 = document.getElementById("donng44").value;
+	var donne45 = document.getElementById("donng45").value;
+	var donne46 = document.getElementById("donng46").value;
+	var donne47 = document.getElementById("donng47").value;
+	var donne48 = document.getElementById("donng48").value;
+	var donne49 = document.getElementById("donng49").value;
+	var donne50 = document.getElementById("donng50").value;
+	var donne51 = document.getElementById("donng51").value;
+	var donne52 = document.getElementById("donng52").value;
+	var donne53 = document.getElementById("donng53").value;
+	var donne54 = document.getElementById("donng54").value;
+	var donne55 = document.getElementById("donng55").value;
+	var donne56 = document.getElementById("donng56").value;
+	var donne57 = document.getElementById("donng57").value;
+	var donne58 = document.getElementById("donng58").value;
+	var donne59 = document.getElementById("donng59").value;
+	var donne60 = document.getElementById("donng60").value;
+	var donne61 = document.getElementById("donng61").value;
+	var donne62 = document.getElementById("donng62").value;
+	var donne63 = document.getElementById("donng63").value;
+	var donne64 = document.getElementById("donng64").value;
+	var donne65 = document.getElementById("donng65").value;
+	var donne66 = document.getElementById("donng66").value;
+	var donne67 = document.getElementById("donng67").value;
+	var donne68 = document.getElementById("donng68").value;
+	var donne69 = document.getElementById("donng69").value;
+	var donne70 = document.getElementById("donng70").value;
+	var donne71 = document.getElementById("donng71").value;
+	var donne72 = document.getElementById("donng72").value;
+	var donne73 = document.getElementById("donng73").value;
+        break;
+
 }//fin switch pas ; lecture des differents sons a generer
 
 
@@ -1128,6 +1204,11 @@ if (nombe < 1) {
 nombe = 1;
 }
 var nombf;
+
+switch (donne53) {
+
+  case "0":
+
 
 switch (donne11) {
 
@@ -2162,10 +2243,98 @@ FichierAudioJo.push(donne46);
         break;	//fin zone 6 fronts			
 }//fin switch donne11 
 
+        break;	//donne53 = 0	
 
+  case "1":// donne53 = 1
+
+var waxx2 = 128 - donne54;
+var waxx1 = donne54 - (-128);
+function maFonction7() {
+var xx7 = waxx2 - donne58;
+xx7 = (30 > xx7) ? 30 : xx7;
+  return xx7;
+}
+function maFonction8() {
+var xx8 = waxx1 - (-donne58);
+if(xx8 > 220){xx8 = 220;}
+return xx8;
+}
+
+FichierAudioJo.push(donne54 + 128); 
+FichierAudioJo.push(donne55);
+FichierAudioJo.push(128 - donne54); 
+FichierAudioJo.push(donne55);
+
+if(donne56 == 0){
+
+for (nombi = 0; nombi < donne71; nombi++) {
+
+var waxx1 = maFonction8();
+var waxx2 = maFonction7();
+
+FichierAudioJo.push(waxx1); 
+FichierAudioJo.push(donne55);
+FichierAudioJo.push(waxx2); 
+FichierAudioJo.push(donne55);
+
+
+} // fin for nombi
+} // fin if donne56 == 0
+
+if((donne56 > 0)&&(donne57==0)){
+
+for (nombi = 0; nombi < donne71; nombi++) {
+
+var waxx1 = maFonction8();
+var waxx2 = maFonction7();
+
+for (var nombia = 0; nombia < donne56; nombia++) {
+console.log(waxx1);
+console.log(waxx2);
+FichierAudioJo.push(waxx1); 
+FichierAudioJo.push(donne55);
+FichierAudioJo.push(waxx2); 
+FichierAudioJo.push(donne55);
+} // fin for donne56
+
+
+} // fin for nombi
+} // fin if donne56 > 0
+
+if((donne56 > 0)&&(donne57 > 0)){
+
+for (nombi = 0; nombi < donne71; nombi++) {
+
+var waxx1 = maFonction8();
+var waxx2 = maFonction7();
+
+for (var nombia = 0; nombia < donne56; nombia++) {
+
+for (var nombiab = 0; nombiab < donne59; nombiab ++) {
+FichierAudioJo.push(waxx1); 
+FichierAudioJo.push(donne55);
+FichierAudioJo.push(waxx1-1); 
+FichierAudioJo.push(donne57);
+} // fin for donne59
+for (var nombiab = 0; nombiab < donne59; nombiab++) {
+FichierAudioJo.push(waxx2); 
+FichierAudioJo.push(donne55);
+FichierAudioJo.push(waxx2-1); 
+FichierAudioJo.push(donne57);
+} // fin for donne59
+
+} // fin for donne56
+
+
+} // fin for nombi
+} // fin if donne56 > 0
+
+
+        break;	//donne53 = 1
+
+}//fin switch  donne53
 
 }// fin de la boucle du nombre de sons différents
-
 
 
 
