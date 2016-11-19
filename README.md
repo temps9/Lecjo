@@ -162,6 +162,37 @@ limit of the height variation: donne59
 width variation: donne60
 limit of the width variation: donne61
 
+case donne53 egal 2 : Activation du mode surf en inversion de durée
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+height repeat:donne56
+
+case donne53 egal 3 : Activation du mode surf en inversion assymetrique de durée 3 fronts
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+Wave front 3 width: donne19
+height repeat:donne56
+
+case donne53 egal 4 : Activation du mode surf en inversion symetrique de durée 3 fronts
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+Wave front 3 width: donne19
+height repeat:donne56
+
+case donne53 egal 5 : Activation du mode surf en inversion assymetrique de durée 4 fronts
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+Wave front 3 width: donne19
+Wave front 4 width: donne28
+height repeat:donne56
+
+case donne53 egal 6 : Activation du mode surf en inversion symetrique de durée 4 fronts
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+Wave front 3 width: donne19
+Wave front 4 width: donne28
+height repeat:donne56
+
 Final inertia manager
 Activation du mode inertia en position 1: done62
 height : donne63
