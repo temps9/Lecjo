@@ -30,17 +30,35 @@ The adn.js file, see if each open HTML page contains data, called "donne1". If d
 
 adn.js
 
-var donne = [1, 220, 100, 0, 0, 0, 0, 0, 0, 30,
-100, 2, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 200, 0, 0,];
+var don1n =new Array;
+var don2n =new Array;
 
+don1n = [1, 220, 100, 0, 0, 1, 130, 0, 0, 30,
+100, 2, 0, 1, 220, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 100, 0, 0, 2];
 
-for(var i= 0; i < 75; i++)
+don2n = [1, 220, 20, 0, 0, 1, 130, 0, 0, 30,
+180, 2, 0, 1, 220, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 100, 0, 0, 2];
+
+var total=new Array;
+total[0]="don1n"; total[1]="don2n";
+var total1=new Array;
+total1[0]=don1n; total1[1]=don2n;
+
+for(var ui= 0; ui &lt; 2; ui++)
+{
+for(var i= 0; i &lt; 75; i++)
 {
 var nouveauinput;
 function ajouteElemen() {
@@ -48,15 +66,16 @@ function ajouteElemen() {
 var body   = document.body || document.getElementsByTagName('body')[0],
 nouveauinput  =  document.createElement("input");
 nouveauinput.setAttribute("type", "number");
-nouveauinput.setAttribute("id", ("donne"+i));
-nouveauinput.setAttribute("value", donne[i]);
+nouveauinput.setAttribute("id", total[ui]+i);
+nouveauinput.setAttribute("value", total1[ui][i]);
 nouveauinput.setAttribute("style", "display: none;");
 // ajoute l'élément qui vient d'être créé et son contenu au DOM
 body.insertBefore(nouveauinput,body.childNodes[0]);
-console.log("donne"+i);
-console.log(donne[i]);
+console.log(total[ui]+i);
+console.log(total1[ui][i]);
 }  
 ajouteElemen();
+}
 }
 
 The values in the HTML page
