@@ -6,14 +6,14 @@ var don5n =new Array;
 var don6n =new Array;
 var don7n =new Array;
 
-don1n = [1, 220, 44, 1, 100, 1, 0, 0, 0, 30,
-46, 6, 0, 0, 0, 0, 0, 0, 130, 48,
-0, 0, 0, 0, 0, 0, 0, 120, 50, 0,
-0, 0, 0, 0, 0, 0, 128, 100, 0, 0,
-0, 0, 0, 0, 0, 122, 100, 0, 0, 0,
-0, 0, 0, 6, 0, 10, 10, 100, 2, 1,
+don1n = [1, 220, 24, 0, 0, 0, 0, 0, 0, 30,
+28, 6, 0, 0, 0, 0, 0, 0, 130, 26,
+0, 0, 0, 0, 0, 0, 0, 120, 30, 0,
+0, 0, 0, 0, 0, 0, 128, 18, 0, 0,
+0, 0, 0, 0, 0, 122, 220, 0, 0, 0,
+0, 0, 0, 2, 1, 1, 1, 5, 1, 1,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 80, 1, 0, 7];
+0, 400, 1, 0, 7];
 
 don2n = [1, 220, 74, 1, 100, 1, 0, 0, 0, 30,
 76, 6, 0, 0, 0, 0, 0, 0, 130, 78,
@@ -80,17 +80,13 @@ for(var i= 0; i < 75; i++)
 {
 var nouveauinput;
 function ajouteElemen() {
-// crée un nouvel élément input
 var body   = document.body || document.getElementsByTagName('body')[0],
 nouveauinput  =  document.createElement("input");
 nouveauinput.setAttribute("type", "number");
 nouveauinput.setAttribute("id", total[ui]+i);
 nouveauinput.setAttribute("value", total1[ui][i]);
 nouveauinput.setAttribute("style", "display: none;");
-// ajoute l'élément qui vient d'être créé et son contenu au DOM
 body.insertBefore(nouveauinput,body.childNodes[0]);
-console.log(total[ui]+i);
-console.log(total1[ui][i]);
 }  
 ajouteElemen();
 }

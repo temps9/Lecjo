@@ -5,8 +5,9 @@
 </head>
 <body>
 
-<p> adn2.js with :</p>
+<p> adn15.js with :</p>
 <pre>
+
 var don1n =new Array;
 var don2n =new Array;
 var don3n =new Array;
@@ -218,23 +219,24 @@ don21n = [1, 220, 80, 0, 0, 1, 130, 0, 0, 30,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 100, 0, 0, 21];
 
+var total=new Array;
+total[0]="don1n"; total[1]="don2n"; total[2]="don3n"; total[3]="don4n"; total[4]="don5n"; total[5]="don6n"; total[6]="don7n"; total[7]="don8n"; total[8]="don9n"; total[9]="don10n"; total[10]="don11n"; total[11]="don12n"; total[12]="don13n"; total[13]="don14n"; total[14]="don15n"; total[15]="don16n"; total[16]="don17n"; total[17]="don18n"; total[18]="don19n"; total[19]="don20n"; total[20]="don21n"; 
+var total1=new Array;
+total1[0]=don1n; total1[1]=don2n; total1[2]=don3n; total1[3]=don4n; total1[4]=don5n; total1[5]=don6n; total1[6]=don7n; total1[7]=don8n; total1[8]=don9n; total1[9]=don10n; total1[10]=don11n; total1[10]=don11n; total1[11]=don12n; total1[11]=don12n; total1[12]=don13n; total1[13]=don14n; total1[14]=don15n; total1[15]=don16n; total1[16]=don17n; total1[17]=don18n; total1[18]=don19n; total1[19]=don20n; total1[20]=don21n; 
+
 for(var ui= 0; ui &lt; 21; ui++)
 {
 for(var i= 0; i &lt; 75; i++)
 {
 var nouveauinput;
 function ajouteElemen() {
-// crée un nouvel élément input
 var body   = document.body || document.getElementsByTagName('body')[0],
 nouveauinput  =  document.createElement("input");
 nouveauinput.setAttribute("type", "number");
 nouveauinput.setAttribute("id", total[ui]+i);
 nouveauinput.setAttribute("value", total1[ui][i]);
 nouveauinput.setAttribute("style", "display: none;");
-// ajoute l'élément qui vient d'être créé et son contenu au DOM
 body.insertBefore(nouveauinput,body.childNodes[0]);
-console.log(total[ui]+i);
-console.log(total1[ui][i]);
 }  
 ajouteElemen();
 }

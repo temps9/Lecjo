@@ -30,19 +30,14 @@ for(var i= 0; i < 75; i++)
 {
 var nouveauinput;
 function ajouteElemen() {
-// crée un nouvel élément input
 var body   = document.body || document.getElementsByTagName('body')[0],
 nouveauinput  =  document.createElement("input");
 nouveauinput.setAttribute("type", "number");
 nouveauinput.setAttribute("id", total[ui]+i);
 nouveauinput.setAttribute("value", total1[ui][i]);
 nouveauinput.setAttribute("style", "display: none;");
-// ajoute l'élément qui vient d'être créé et son contenu au DOM
 body.insertBefore(nouveauinput,body.childNodes[0]);
-console.log(total[ui]+i);
-console.log(total1[ui][i]);
 }  
 ajouteElemen();
 }
 }
-

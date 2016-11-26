@@ -2,10 +2,10 @@
 This extension includes:
 a background script, "background.js" 
 a browser action 
-a page "adn.js" 
+a page "adn1.js" 
 a page "index.html" 
 # What it does
-All it does is: generates an audio file when an HTML page contains donne1.
+All it does is: generates an audio file when an HTML page contains don1n.
 # What it shows
 How to play music, adding little value to your HTML file
 # Usage
@@ -151,7 +151,7 @@ limit of the height variation: donne50
 width variation: donne51
 limit of the width variation: donne52
 
-Make surfing an audio
+Make surfing an audio (unicorn, White work)
 Activation du mode surf en position 1: donne53
 height : donne54
 width:donne55
@@ -162,35 +162,43 @@ limit of the height variation: donne59
 width variation: donne60
 limit of the width variation: donne61
 
-case donne53 egal 2 : Activation du mode surf en inversion de durée
+case donne53 egal 2 : Enabling surf mode en inversion de durée
 Wave front 1 width: donne2
 Wave front 2 width: donne10
 height repeat:donne56
 
-case donne53 egal 3 : Activation du mode surf en inversion assymetrique de durée 3 fronts
-Wave front 1 width: donne2
-Wave front 2 width: donne10
-Wave front 3 width: donne19
-height repeat:donne56
-
-case donne53 egal 4 : Activation du mode surf en inversion symetrique de durée 3 fronts
+case donne53 egal 3 : Enabling surf mode en inversion assymetrique de durée 3 fronts
 Wave front 1 width: donne2
 Wave front 2 width: donne10
 Wave front 3 width: donne19
 height repeat:donne56
 
-case donne53 egal 5 : Activation du mode surf en inversion assymetrique de durée 4 fronts
+case donne53 egal 4 : Enabling surf mode en inversion symetrique de durée 3 fronts
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+Wave front 3 width: donne19
+height repeat:donne56
+
+case donne53 egal 5 : Enabling surf mode en inversion assymetrique de durée 4 fronts
+Wave front 1 width: donne2
+Wave front 2 width: donne10
+Wave front 3 width: donne19
+Wave front 4 width: donne28
+height repeat:donne56
+
+case donne53 egal 6 : Enabling surf mode en inversion symetrique de durée 4 fronts
 Wave front 1 width: donne2
 Wave front 2 width: donne10
 Wave front 3 width: donne19
 Wave front 4 width: donne28
 height repeat:donne56
 
-case donne53 egal 6 : Activation du mode surf en inversion symetrique de durée 4 fronts
+case donne53 egal 7 : Enabling surf mode in symmetrical inversion of duration 5 fronts
 Wave front 1 width: donne2
 Wave front 2 width: donne10
 Wave front 3 width: donne19
 Wave front 4 width: donne28
+Wave front 5 width: donne37
 height repeat:donne56
 
 Final inertia manager
