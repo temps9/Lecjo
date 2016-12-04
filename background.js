@@ -627,7 +627,7 @@ for (pas = 0; pas < donne[74] ; pas++) {
 
 var basedeconstruc = "don";
 var lincremente = 0;
-var pasop = pas + 1;
+var pasop = pas -(- 1);
 
 for(var pui= 1; pui < 74; pui++)
 {
@@ -644,7 +644,7 @@ var xx1 = le1 - donne[5];
 
 var le2 = donne[9];//variation amplitude front2
 function maFonction2() {
-var xx2 = le2 - (-donne[13]);
+var xx2 = Number(le2) -(- Number(donne[13]));
   return xx2;
 }
 
@@ -677,35 +677,33 @@ var nombi; //boucle generale de donne[71]
 var nomba;
 var nombd;
 var nombe  = donne[20];
-if (nombe < 1) {
-nombe = 1;
-}
+nombe = (nombe < 1) ? 1:nombe;
 var nombf;
 
 var waxx2 = 128 - Number(donne[54]);
-var waxx1 = (Number(donne[54]) + 128);
+var waxx1 = (Number(donne[54]) -(- 128));
 function maFonction7() {
 var xx7 = waxx2 - donne[58];
 xx7 = (30 > xx7) ? 30 : xx7;
   return xx7;
 }
 function maFonction8() {
-var xx8 = waxx1 + Number(donne[58]);
-if(xx8 > 220){xx8 = 220;}
+var xx8 = waxx1 -(- Number(donne[58]));
+xx8 = (xx8 > 220) ? 220:xx8;
 return xx8;
 }
 
-switch (donne[53]) {
+switch (Number(donne[53])) {
 
-  case "0":
+  case 0 :
 
 
-switch (donne[11]) {
+switch (Number(donne[11])) {
 
 
 //zone 2 fronts
 
-	case "2":
+	case 2 :
 
 for (nombi = 0; nombi < donne[71]; nombi++) 
 	{//1
@@ -715,7 +713,7 @@ if ((donne[5] > 0)&&(donne[7] > 0))
 le3 = maFonction3();
 le4 = maFonction4();
 
-for (var nomb = 0; nomb < (Number(donne[3]) + 1); nomb++)
+for (var nomb = 0; nomb < (Number(donne[3]) -(- 1)); nomb++)
 	  { //3 height repeat
 FichierAudioJo.push(le1);
 FichierAudioJo.push(le5);
@@ -734,17 +732,23 @@ FichierAudioJo.push(donne[4]);
 le1 = maFonction1();
 if (donne[5] > 0)
 {
-le1 = ((donne[6] < le1)&&(le1 < 220)) ? donne[6] : le1;//limit of the height variation
+le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
 }
 if (donne[5] < 0)
 {
-le1 = ((donne[6] > le1)&&(le1 > 29)) ? donne[6] : le1;//limit of the height variation
+le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
 }
 
-//if (le1<donne[6]){le1=donne[6];}
 le5 = maFonction5();
+if (donne[7] > 0)
+{
 le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
+}
 
+if (donne[7] < 0)
+{
+le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
+}
 
 FichierAudioJo.push(le2);
 FichierAudioJo.push(le6);
@@ -901,7 +905,7 @@ FichierAudioJo.push(donne[12]);
 //fin zone 2 fronts
 
 //zone 3 fronts
-  case "3":
+  case 3 :
 
 for (nombi = 0; nombi < donne[71]; nombi++) 
 	{//1
@@ -1112,7 +1116,7 @@ FichierAudioJo.push(donne[19]);
 
 //zone 4 fronts
 
-  case "4":// donne[11]
+  case 4 :// donne[11]
 for (nombi = 0; nombi < donne[71]; nombi++) 
 	{//1
 if ((donne[5] > 0)&&(donne[7] > 0))
@@ -1331,7 +1335,7 @@ FichierAudioJo.push(donne[28]);
 
 //zone 5 fronts
 
-  case "5":// donne[11]
+  case 5 :// donne[11]
 
 for (nombi = 0; nombi < donne[71]; nombi++) 
 	{//1
@@ -1565,7 +1569,7 @@ FichierAudioJo.push(donne[37]);
 
 //zone 6 fronts
 
-  case "6":// donne[11]
+  case 6 :// donne[11]
 for (nombi = 0; nombi < donne[71]; nombi++) 
 	{//1
 if ((donne[5] > 0)&&(donne[7] > 0))
@@ -1808,9 +1812,9 @@ FichierAudioJo.push(donne[46]);
 
         break;	//donne[53] = 0	
 
-  case "1":// donne[53] = 1
+  case 1 :// donne[53] = 1
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[55]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[55]);
@@ -1882,9 +1886,9 @@ FichierAudioJo.push(donne[57]);
 
 /*****************************************/
 
-  case "2":// donne[53] = 2
+  case 2 :// donne[53] = 2
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
@@ -1976,9 +1980,9 @@ FichierAudioJo.push(donne[57]);
         break;	//donne[53] = 2
 /*****************************************/
 
-  case "3":// donne[53] = 3
+  case 3 :// donne[53] = 3
 
-FichierAudioJo.push(Number(donne[54]) + 128); 
+FichierAudioJo.push(Number(donne[54]) -(- 128)); 
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
@@ -2091,9 +2095,9 @@ FichierAudioJo.push(donne[57]);
         break;	//donne[53] = 3
 /*****************************************/
 
-  case "4":// donne[53] = 4
+  case 4 :// donne[53] = 4
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
@@ -2207,9 +2211,9 @@ FichierAudioJo.push(donne[57]);
 
 /*****************************************/
 
-  case "5":// donne[53] = 5
+  case 5 :// donne[53] = 5
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
@@ -2343,9 +2347,9 @@ FichierAudioJo.push(donne[57]);
 
 /*****************************************/
 
-  case "6":// donne[53] = 6
+  case 6 :// donne[53] = 6
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
@@ -2481,9 +2485,9 @@ FichierAudioJo.push(donne[57]);
 
 /*****************************************/
 
-  case "7":// donne[53] = 7
+  case 7 :// donne[53] = 7
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
@@ -2639,9 +2643,9 @@ FichierAudioJo.push(donne[57]);
 
 /*****************************************/
 
-  case "8":// donne[53] = 8
+  case 8 :// donne[53] = 8
 
-FichierAudioJo.push(Number(donne[54]) + 128);
+FichierAudioJo.push(Number(donne[54]) -(- 128));
 FichierAudioJo.push(donne[2]);
 FichierAudioJo.push(128 - donne[54]); 
 FichierAudioJo.push(donne[10]);
