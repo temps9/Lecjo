@@ -639,12 +639,16 @@ var pas1; //variable du switch trie du nombre de fronts
 var le1 = donne[1];//variation amplitude front1
 function maFonction1() {
 var xx1 = le1 - donne[5];
+if ((donne[5] > 0)&&(xx1 < donne[6])){ xx1 = donne[6];}//limit of the height variation
+if ((donne[5] < 0)&&(xx1 > donne[6])){ xx1 = donne[6];}//limit of the height variation
   return xx1;
 }
 
 var le2 = donne[9];//variation amplitude front2
 function maFonction2() {
-var xx2 = Number(le2) -(- Number(donne[13]));
+var xx2 = le2 -(- donne[13]);
+if ((donne[13] > 0)&&(xx2 > donne[14])){ xx2 = donne[14];}//limit of the height variation
+if ((donne[13] < 0)&&(xx2 < donne[14])){ xx2 = donne[14];}//limit of the height variation
   return xx2;
 }
 
@@ -670,7 +674,8 @@ xx5 = (xx5 < 3) ? 3 : xx5;
 var le6 = donne[10];//variation durée front1
 function maFonction6() {
 var xx6 = le6 - donne[15];
-xx6 = (xx6 < 3) ? 3 : xx6;
+if ((donne[15] > 0)&&(xx6 < donne[16])){ xx6 = donne[16];}//limit of the height variation
+if ((donne[15] > 0)&&(xx6 > donne[16])){ xx6 = donne[16];}//limit of the height variation
   return xx6;
 }
 
@@ -732,14 +737,7 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
+
 
 le5 = maFonction5();
 if (donne[7] > 0)
@@ -766,17 +764,9 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-le2 = (donne[14] < le2) ? donne[14] : le2;//limit of the height variation
-le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
+le6 = maFonction6();
+
 
 	  }//3 fin fo nomb
 	 }//2 fin if donne[5]
@@ -805,14 +795,6 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
 
 
 FichierAudioJo.push(le2);
@@ -829,8 +811,6 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-le2 = (le2 < donne[14] ) ? donne[14] : le2;//limit of the height variation
-
 
 	  }//3 fin fo nomb
 	 }//2 fin if donne[5] donne[7]
@@ -883,15 +863,7 @@ FichierAudioJo.push(donne[12]);
 	    }//5
 
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
 	   }//4 fin fo nombd
 	  }//3 fin if donne[7]
 
@@ -964,14 +936,6 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
 
 le5 = maFonction5();
 if (donne[7] > 0)
@@ -1000,17 +964,7 @@ FichierAudioJo.push(donne[12]);
 	   }//4
 le2 = maFonction2();
 
-le2 = ( le2 > donne[14] ) ? donne[14] : le2;//limit of the height variation
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
-
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
 
 	  }//3 fin fo nomb
 
@@ -1044,15 +998,6 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
-
 
 FichierAudioJo.push(le2);
 FichierAudioJo.push(donne[10]);
@@ -1068,7 +1013,6 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-if (donne[14]<le2){le2=donne[14];} //limit of the height variation
 
 
 	  }//3 fin fo nomb
@@ -1127,15 +1071,7 @@ FichierAudioJo.push(donne[12]);
 	    }//5
 
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
 	   }//4 fin fo nombd
 
 
@@ -1220,14 +1156,7 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
+
 le5 = maFonction5();
 if (donne[7] > 0)
 {
@@ -1254,19 +1183,7 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-//if (donne[14]<le2){le2=donne[14];} 
-le2 = (donne[14] < le2) ? donne[14] : le2;//limit of the height variation
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
-
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
-
 	  }//3 fin fo nomb
 
 
@@ -1302,15 +1219,6 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
-
 
 FichierAudioJo.push(le2);
 FichierAudioJo.push(donne[10]);
@@ -1326,7 +1234,6 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-if (donne[14]<le2){le2=donne[14];} //limit of the height variation
 
 
 	  }//3 fin fo nomb
@@ -1387,15 +1294,7 @@ FichierAudioJo.push(donne[12]);
 	    }//5
 
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
 	   }//4 fin fo nombd
 
 
@@ -1485,14 +1384,7 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
+
 le5 = maFonction5();
 if (donne[7] > 0)
 {
@@ -1519,18 +1411,9 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-//if (donne[14]<le2){le2=donne[14];} 
-le2 = (donne[14] < le2) ? donne[14] : le2;//limit of the height variation
-le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
+le6 = maFonction6();
+
 
 	  }//3 fin fo nomb
 
@@ -1570,15 +1453,6 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
-
 
 FichierAudioJo.push(le2);
 FichierAudioJo.push(donne[10]);
@@ -1594,7 +1468,6 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-if (donne[14]<le2){le2=donne[14];} //limit of the height variation
 
 
 	  }//3 fin fo nomb
@@ -1658,15 +1531,7 @@ FichierAudioJo.push(donne[12]);
 	    }//5
 
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
 	   }//4 fin fo nombd
 
 
@@ -1763,14 +1628,7 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
+
 le5 = maFonction5();
 if (donne[7] > 0)
 {
@@ -1797,18 +1655,9 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-//if (donne[14]<le2){le2=donne[14];} 
-le2 = (donne[14] < le2) ? donne[14] : le2;//limit of the height variation
-le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
+le6 = maFonction6();
+
 
 	  }//3 fin fo nomb
 
@@ -1851,15 +1700,6 @@ FichierAudioJo.push(donne[4]);
 	   }//4
 
 le1 = maFonction1();
-if (donne[5] > 0)
-{
-le1 = (donne[6] < le1) ? donne[6] : le1;//limit of the height variation
-}
-if (donne[5] < 0)
-{
-le1 = (donne[6] > le1) ? donne[6] : le1;//limit of the height variation
-}
-
 
 FichierAudioJo.push(le2);
 FichierAudioJo.push(donne[10]);
@@ -1875,8 +1715,6 @@ FichierAudioJo.push(donne[12]);
 	    }//5 
 	   }//4
 le2 = maFonction2();
-if (donne[14]<le2){le2=donne[14];} //limit of the height variation
-
 
 	  }//3 fin fo nomb
 
@@ -1942,15 +1780,7 @@ FichierAudioJo.push(donne[12]);
 	    }//5
 
 le6 = maFonction6();
-if (donne[15] > 0)
-{
-le6 = (donne[16] > le6) ? donne[16] : le6;//limit of the width variation
-}
 
-if (donne[15] < 0)
-{
-le6 = (donne[16] < le6) ? donne[16] : le6;//limit of the width variation
-}
 	   }//4 fin fo nombd
 
 
