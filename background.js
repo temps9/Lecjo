@@ -667,16 +667,26 @@ var xx4 = le2 -1;
 var le5 = donne[2];//variation durée front1
 function maFonction5() {
 var xx5 = le5 - donne[7];
-xx5 = (xx5 < 3) ? 3 : xx5;
+if ((donne[7] > 0)&&(xx5 < donne[8])){ xx5 = donne[8];}//limit of the height variation
+if ((donne[7] > 0)&&(xx5 > donne[8])){ xx5 = donne[8];}//limit of the height variation
   return xx5;
 }
 
-var le6 = donne[10];//variation durée front1
+var le6 = donne[10];//variation durée front2
 function maFonction6() {
 var xx6 = le6 - donne[15];
 if ((donne[15] > 0)&&(xx6 < donne[16])){ xx6 = donne[16];}//limit of the height variation
 if ((donne[15] > 0)&&(xx6 > donne[16])){ xx6 = donne[16];}//limit of the height variation
   return xx6;
+}
+
+
+var le7 = donne[18];//variation amplitude front3
+function maFonction7() {
+var xx7 = le7 - donne[22];
+if ((donne[22] > 0)&&(xx7 < donne[23])){ xx7 = donne[23];}//limit of the height variation
+if ((donne[22] < 0)&&(xx7 > donne[23])){ xx7 = donne[23];}//limit of the height variation
+  return xx7;
 }
 
 
@@ -738,17 +748,8 @@ FichierAudioJo.push(donne[4]);
 
 le1 = maFonction1();
 
-
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
 
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 FichierAudioJo.push(le2);
 FichierAudioJo.push(le6);
@@ -839,15 +840,7 @@ FichierAudioJo.push(donne[4]);
 
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
 
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 FichierAudioJo.push(donne[9]);
 FichierAudioJo.push(le6);
@@ -938,15 +931,7 @@ FichierAudioJo.push(donne[4]);
 le1 = maFonction1();
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
 
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 
 FichierAudioJo.push(le2);
@@ -1047,15 +1032,6 @@ FichierAudioJo.push(donne[4]);
 
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
-
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 FichierAudioJo.push(donne[9]);
 FichierAudioJo.push(le6);
@@ -1158,15 +1134,7 @@ FichierAudioJo.push(donne[4]);
 le1 = maFonction1();
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
 
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 
 FichierAudioJo.push(le2);
@@ -1270,15 +1238,7 @@ FichierAudioJo.push(donne[4]);
 
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
 
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 FichierAudioJo.push(donne[9]);
 FichierAudioJo.push(le6);
@@ -1386,15 +1346,6 @@ FichierAudioJo.push(donne[4]);
 le1 = maFonction1();
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
-
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 
 FichierAudioJo.push(le2);
@@ -1507,15 +1458,6 @@ FichierAudioJo.push(donne[4]);
 
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
-
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 FichierAudioJo.push(donne[9]);
 FichierAudioJo.push(le6);
@@ -1630,15 +1572,6 @@ FichierAudioJo.push(donne[4]);
 le1 = maFonction1();
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
-
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 
 FichierAudioJo.push(le2);
@@ -1756,15 +1689,6 @@ FichierAudioJo.push(donne[4]);
 
 
 le5 = maFonction5();
-if (donne[7] > 0)
-{
-le5 = (donne[8] > le5) ? donne[8] : le5;//limit of the width variation
-}
-
-if (donne[7] < 0)
-{
-le5 = (donne[8] < le5) ? donne[8] : le5;//limit of the width variation
-}
 
 FichierAudioJo.push(donne[9]);
 FichierAudioJo.push(le6);
