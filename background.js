@@ -2590,7 +2590,6 @@ FichierAudioJo.push(donne[57]);
 
 FichierAudioJo = FichierAudioJo.map(Number);
 
-console.log(FichierAudioJo);
 
 lecjoa1(FichierAudioJo);
 
