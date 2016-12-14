@@ -713,6 +713,42 @@ if ((donne[49] < 0)&&(xx10 < donne[50])){ xx10 = donne[50];}//limit of the heigh
   return xx10;
 }
 
+var le11 = donne[18];//variation width front3
+function maFonction11() {
+var xx11 = le11 - donne[24];
+if ((donne[24] > 0)&&(xx11 < donne[25])){ xx11 = donne[25];}//limit of the width variation
+if ((donne[24] < 0)&&(xx11 > donne[25])){ xx11 = donne[25];}//limit of the width variation
+  return xx11;
+}
+
+var le12 = donne[27];//variation width front4
+function maFonction12() {
+var xx12 = le12 - donne[33];
+if ((donne[33] > 0)&&(xx12 < donne[34])){ xx12 = donne[34];}//limit of the width variation
+if ((donne[33] < 0)&&(xx12 > donne[34])){ xx12 = donne[34];}//limit of the width variation
+  return xx12;
+}
+
+var le13 = donne[36];//variation width front5
+function maFonction13() {
+var xx13 = le13 - donne[42];
+if ((donne[42] > 0)&&(xx13 < donne[43])){ xx13 = donne[43];}//limit of the width variation
+if ((donne[42] < 0)&&(xx13 > donne[43])){ xx13 = donne[43];}//limit of the width variation
+  return xx13;
+}
+
+var le14 = donne[45];//variation width front6
+function maFonction14() {
+var xx14 = le14 - donne[51];
+if ((donne[51] > 0)&&(xx14 < donne[52])){ xx14 = donne[52];}//limit of the width variation
+if ((donne[51] < 0)&&(xx14 > donne[52])){ xx14 = donne[52];}//limit of the width variation
+  return xx14;
+}
+
+/*********************/
+
+
+
 var nombi; //boucle generale de donne[71]
 var nomba;
 var nombd;
@@ -737,6 +773,12 @@ var laforce = donne[3] -(- 1);
 
 var letri1;
 var letri2;
+var letri3;
+var letri4;
+var letri5;
+var letri6;
+var letri7;
+var letri8;
 
 switch (Number(donne[53])) {
 
@@ -902,12 +944,14 @@ switch (Number(donne[11])) {
     }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    le1 = maFonction1();
    le5 = maFonction5();
    le2 = maFonction2();
    le6 = maFonction6();
    le7 = maFonction7();
+   le11 = maFonction11();
    }//2 fin if donne[5] != 0 & donne[7] != 0
 
    if ((donne[5] != 0)&&(donne[7] == 0)) {//2
@@ -938,10 +982,12 @@ switch (Number(donne[11])) {
      }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
     le1 = maFonction1();
     le2 = maFonction2();
     le7 = maFonction7();
+    le11 = maFonction11();
     }//2 fin if donne[5] donne[7]
 
    if (donne[5] == 0) {//2
@@ -970,10 +1016,12 @@ switch (Number(donne[11])) {
        }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
       le5 = maFonction5();
       le6 = maFonction6();
       le7 = maFonction7();
+      le11 = maFonction11();
       }//3 fin if donne[7]
      if (donne[7] == 0) {//3
       for (var nomb = 0; nomb < laforce ; nomb++) {//4
@@ -1000,8 +1048,10 @@ switch (Number(donne[11])) {
         }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
       le7 = maFonction7();
+      le11 = maFonction11();
        }//3 fin else donne[7]
       }//2 fin else donne[5]
      }//1 fin du for donne[71]
@@ -1043,16 +1093,20 @@ switch (Number(donne[11])) {
     }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
    le1 = maFonction1();
    le5 = maFonction5();
    le2 = maFonction2();
    le6 = maFonction6();
    le7 = maFonction7();
    le8 = maFonction8();
+   le11 = maFonction11();
+   le12 = maFonction12();
    }//2 fin if donne[5] != 0 & donne[7] != 0
 
    if ((donne[5] != 0)&&(donne[7] == 0)) {//2
@@ -1083,14 +1137,18 @@ switch (Number(donne[11])) {
      }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
     le1 = maFonction1();
     le2 = maFonction2();
     le7 = maFonction7();
     le8 = maFonction8();
+    le11 = maFonction11();
+    le12 = maFonction12();
     }//2 fin if donne[5] donne[7]
 
    if (donne[5] == 0) {//2
@@ -1119,14 +1177,18 @@ switch (Number(donne[11])) {
        }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
       le5 = maFonction5();
       le6 = maFonction6();
       le7 = maFonction7();
       le8 = maFonction8();
+      le11 = maFonction11();
+      le12 = maFonction12();
       }//3 fin if donne[7]
      if (donne[7] == 0) {//3
       for (var nomb = 0; nomb < laforce ; nomb++) {//4
@@ -1153,12 +1215,16 @@ switch (Number(donne[11])) {
         }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
       le7 = maFonction7();
       le8 = maFonction8();
+      le11 = maFonction11();
+      le12 = maFonction12();
        }//3 fin else donne[7]
       }//2 fin else donne[5]
      }//1 fin du for donne[71]
@@ -1200,18 +1266,26 @@ switch (Number(donne[11])) {
     }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-   FichierAudioJo.push(donne[36]); //front5
-   FichierAudioJo.push(donne[37]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
    le1 = maFonction1();
    le5 = maFonction5();
    le2 = maFonction2();
    le6 = maFonction6();
    le7 = maFonction7();
    le8 = maFonction8();
+   le9 = maFonction9();
+   le11 = maFonction11();
+   le12 = maFonction12();
+   le13 = maFonction13();
    }//2 fin if donne[5] != 0 & donne[7] != 0
 
    if ((donne[5] != 0)&&(donne[7] == 0)) {//2
@@ -1242,16 +1316,24 @@ switch (Number(donne[11])) {
      }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-    FichierAudioJo.push(donne[36]); //front5
-    FichierAudioJo.push(donne[37]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
     le1 = maFonction1();
     le2 = maFonction2();
     le7 = maFonction7();
     le8 = maFonction8();
+   le9 = maFonction9();
+   le11 = maFonction11();
+   le12 = maFonction12();
+   le13 = maFonction13();
     }//2 fin if donne[5] donne[7]
 
    if (donne[5] == 0) {//2
@@ -1280,10 +1362,14 @@ switch (Number(donne[11])) {
        }//4 fin fo nombd
     le1 = maFonction1();
     le2 = maFonction2();
-      FichierAudioJo.push(donne[36]); //front5
-      FichierAudioJo.push(donne[37]);
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
       le5 = maFonction5();
       le6 = maFonction6();
+      le9 = maFonction9();
+      le13 = maFonction13();
       }//3 fin if donne[7]
      if (donne[7] == 0) {//3
       for (var nomb = 0; nomb < laforce ; nomb++) {//4
@@ -1310,14 +1396,22 @@ switch (Number(donne[11])) {
         }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-       FichierAudioJo.push(donne[36]); //front5
-       FichierAudioJo.push(donne[37]);
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
        le7 = maFonction7();
        le8 = maFonction8();
+       le9 = maFonction9();
+       le11 = maFonction11();
+       le12 = maFonction12();
+       le13 = maFonction13();
        }//3 fin else donne[7]
       }//2 fin else donne[5]
      }//1 fin du for donne[71]
@@ -1359,22 +1453,20 @@ switch (Number(donne[11])) {
     }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-       if (donne[40] == 0) {//4
-       FichierAudioJo.push(donne[36]); //front5
-       FichierAudioJo.push(donne[37]);
-       FichierAudioJo.push(donne[45]); //front6
-       FichierAudioJo.push(donne[46]);
-        }
-       if (donne[40] != 0) {//4
-        FichierAudioJo.push(le9); //front5
-        FichierAudioJo.push(donne[37]);
-        FichierAudioJo.push(le10); //front6
-        FichierAudioJo.push(donne[46]);
-        }
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
+   letri4 = donne[49] == 0 ? donne[45] : le10;
+   FichierAudioJo.push(letri4); //front6
+   letri8 = donne[51] == 0 ? donne[46] : le14;
+   FichierAudioJo.push(letri8); //front6
    le1 = maFonction1();
    le5 = maFonction5();
    le2 = maFonction2();
@@ -1383,6 +1475,10 @@ switch (Number(donne[11])) {
    le8 = maFonction8();
    le9 = maFonction9();
    le10 = maFonction10();
+   le11 = maFonction11();
+   le12 = maFonction12();
+   le13 = maFonction13();
+   le14 = maFonction14();
    }//2 fin if donne[5] != 0 & donne[7] != 0
 
    if ((donne[5] != 0)&&(donne[7] == 0)) {//2
@@ -1413,28 +1509,30 @@ switch (Number(donne[11])) {
      }//3 fin fo nomb
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-       if (donne[40] == 0) {//4
-       FichierAudioJo.push(donne[36]); //front5
-       FichierAudioJo.push(donne[37]);
-       FichierAudioJo.push(donne[45]); //front6
-       FichierAudioJo.push(donne[46]);
-        }
-       if (donne[40] != 0) {//4
-        FichierAudioJo.push(le9); //front5
-        FichierAudioJo.push(donne[37]);
-        FichierAudioJo.push(le10); //front6
-        FichierAudioJo.push(donne[46]);
-        }
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
+   letri4 = donne[49] == 0 ? donne[45] : le10;
+   FichierAudioJo.push(letri4); //front6
+   letri8 = donne[51] == 0 ? donne[46] : le14;
+   FichierAudioJo.push(letri8); //front6
     le1 = maFonction1();
     le2 = maFonction2();
     le7 = maFonction7();
     le8 = maFonction8();
     le9 = maFonction9();
     le10 = maFonction10();
+    le11 = maFonction11();
+    le12 = maFonction12();
+    le13 = maFonction13();
+    le14 = maFonction14();
     }//2 fin if donne[5] donne[7]
 
    if (donne[5] == 0) {//2
@@ -1463,28 +1561,30 @@ switch (Number(donne[11])) {
        }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-       if (donne[40] == 0) {//4
-       FichierAudioJo.push(donne[36]); //front5
-       FichierAudioJo.push(donne[37]);
-       FichierAudioJo.push(donne[45]); //front6
-       FichierAudioJo.push(donne[46]);
-        }
-       if (donne[40] != 0) {//4
-        FichierAudioJo.push(le9); //front5
-        FichierAudioJo.push(donne[37]);
-        FichierAudioJo.push(le10); //front6
-        FichierAudioJo.push(donne[46]);
-        }
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
+   letri4 = donne[49] == 0 ? donne[45] : le10;
+   FichierAudioJo.push(letri4); //front6
+   letri8 = donne[51] == 0 ? donne[46] : le14;
+   FichierAudioJo.push(letri8); //front6
       le5 = maFonction5();
       le6 = maFonction6();
       le7 = maFonction7();
       le8 = maFonction8();
       le9 = maFonction9();
       le10 = maFonction10();
+      le11 = maFonction11();
+      le12 = maFonction12();
+      le13 = maFonction13();
+      le14 = maFonction14();
       }//3 fin if donne[7]
      if (donne[7] == 0) {//3
       for (var nomb = 0; nomb < laforce ; nomb++) {//4
@@ -1511,26 +1611,28 @@ switch (Number(donne[11])) {
         }//4 fin fo nombd
    letri1 = donne[22] == 0 ? donne[18] : le7;
    FichierAudioJo.push(letri1); //front3
-   FichierAudioJo.push(donne[19]);
+   letri5 = donne[24] == 0 ? donne[19] : le11;
+   FichierAudioJo.push(letri5); //front3
    letri2 = donne[31] == 0 ? donne[27] : le8;
    FichierAudioJo.push(letri2); //front4
-   FichierAudioJo.push(donne[28]);
-       if (donne[40] == 0) {//4
-       FichierAudioJo.push(donne[36]); //front5
-       FichierAudioJo.push(donne[37]);
-       FichierAudioJo.push(donne[45]); //front6
-       FichierAudioJo.push(donne[46]);
-        }
-       if (donne[40] != 0) {//4
-        FichierAudioJo.push(le9); //front5
-        FichierAudioJo.push(donne[37]);
-        FichierAudioJo.push(le10); //front6
-        FichierAudioJo.push(donne[46]);
-        }
+   letri6 = donne[33] == 0 ? donne[28] : le12;
+   FichierAudioJo.push(letri6); //front4
+   letri3 = donne[40] == 0 ? donne[36] : le9;
+   FichierAudioJo.push(letri3); //front5
+   letri7 = donne[42] == 0 ? donne[37] : le13;
+   FichierAudioJo.push(letri7); //front5
+   letri4 = donne[49] == 0 ? donne[45] : le10;
+   FichierAudioJo.push(letri4); //front6
+   letri8 = donne[51] == 0 ? donne[46] : le14;
+   FichierAudioJo.push(letri8); //front6
       le7 = maFonction7();
       le8 = maFonction8();
       le9 = maFonction9();
       le10 = maFonction10();
+      le11 = maFonction11();
+      le12 = maFonction12();
+      le13 = maFonction13();
+      le14 = maFonction14();
        }//3 fin else donne[7]
       }//2 fin else donne[5]
      }//1 fin du for donne[71]
@@ -2530,11 +2632,7 @@ FichierAudioJo.push(donne[57]);
 
 }// fin de la boucle du nombre de sons différents
 
-
-
-
 FichierAudioJo = FichierAudioJo.map(Number);
-
 
 lecjoa1(FichierAudioJo);
 
