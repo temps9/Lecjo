@@ -735,6 +735,9 @@ return xx8;
 
 var laforce = donne[3] -(- 1);
 
+var letri1;
+var letri2;
+
 switch (Number(donne[53])) {
 
   case 0 :
@@ -897,12 +900,14 @@ switch (Number(donne[11])) {
        }//5 
       }//4
     }//3 fin fo nomb
-   FichierAudioJo.push(donne[18]); //front3
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
    FichierAudioJo.push(donne[19]);
    le1 = maFonction1();
    le5 = maFonction5();
    le2 = maFonction2();
    le6 = maFonction6();
+   le7 = maFonction7();
    }//2 fin if donne[5] != 0 & donne[7] != 0
 
    if ((donne[5] != 0)&&(donne[7] == 0)) {//2
@@ -931,10 +936,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
      }//3 fin fo nomb
-    FichierAudioJo.push(donne[18]); //front3
-    FichierAudioJo.push(donne[19]);
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
     le1 = maFonction1();
     le2 = maFonction2();
+    le7 = maFonction7();
     }//2 fin if donne[5] donne[7]
 
    if (donne[5] == 0) {//2
@@ -961,10 +968,12 @@ switch (Number(donne[11])) {
          }//6 
         }//5
        }//4 fin fo nombd
-      FichierAudioJo.push(donne[18]); //front3
-      FichierAudioJo.push(donne[19]);
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
       le5 = maFonction5();
       le6 = maFonction6();
+      le7 = maFonction7();
       }//3 fin if donne[7]
      if (donne[7] == 0) {//3
       for (var nomb = 0; nomb < laforce ; nomb++) {//4
@@ -989,8 +998,10 @@ switch (Number(donne[11])) {
 	  }//6 
          }//5
         }//4 fin fo nombd
-       FichierAudioJo.push(donne[18]); //front3
-       FichierAudioJo.push(donne[19]);
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+      le7 = maFonction7();
        }//3 fin else donne[7]
       }//2 fin else donne[5]
      }//1 fin du for donne[71]
@@ -1030,22 +1041,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
     }//3 fin fo nomb
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
    le1 = maFonction1();
    le5 = maFonction5();
    le2 = maFonction2();
@@ -1080,22 +1081,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
      }//3 fin fo nomb
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
     le1 = maFonction1();
     le2 = maFonction2();
     le7 = maFonction7();
@@ -1126,22 +1117,12 @@ switch (Number(donne[11])) {
          }//6 
         }//5
        }//4 fin fo nombd
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
       le5 = maFonction5();
       le6 = maFonction6();
       le7 = maFonction7();
@@ -1170,22 +1151,12 @@ switch (Number(donne[11])) {
 	  }//6 
          }//5
         }//4 fin fo nombd
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
       le7 = maFonction7();
       le8 = maFonction8();
        }//3 fin else donne[7]
@@ -1227,22 +1198,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
     }//3 fin fo nomb
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
    FichierAudioJo.push(donne[36]); //front5
    FichierAudioJo.push(donne[37]);
    le1 = maFonction1();
@@ -1279,22 +1240,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
      }//3 fin fo nomb
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
     FichierAudioJo.push(donne[36]); //front5
     FichierAudioJo.push(donne[37]);
     le1 = maFonction1();
@@ -1357,22 +1308,12 @@ switch (Number(donne[11])) {
 	  }//6 
          }//5
         }//4 fin fo nombd
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
        FichierAudioJo.push(donne[36]); //front5
        FichierAudioJo.push(donne[37]);
        le7 = maFonction7();
@@ -1416,22 +1357,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
     }//3 fin fo nomb
-    if (donne[22] == 0) {//4
-     FichierAudioJo.push(donne[18]); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] == 0) {//4
-     FichierAudioJo.push(donne[27]); //front4
-     FichierAudioJo.push(donne[28]);
-     }
-    if (donne[22] != 0) {//4
-     FichierAudioJo.push(le7); //front3
-     FichierAudioJo.push(donne[19]);
-     }
-    if (donne[31] != 0) {//4
-     FichierAudioJo.push(le8); //front4
-     FichierAudioJo.push(donne[28]);
-     }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
        if (donne[40] == 0) {//4
        FichierAudioJo.push(donne[36]); //front5
        FichierAudioJo.push(donne[37]);
@@ -1480,18 +1411,12 @@ switch (Number(donne[11])) {
        }//5 
       }//4
      }//3 fin fo nomb
-       if (donne[22] == 0) {//4
-        FichierAudioJo.push(donne[18]); //front3
-        FichierAudioJo.push(donne[19]);
-        FichierAudioJo.push(donne[27]); //front4
-        FichierAudioJo.push(donne[28]);
-        }
-       if (donne[22] != 0) {//4
-        FichierAudioJo.push(le7); //front3
-        FichierAudioJo.push(donne[19]);
-        FichierAudioJo.push(le8); //front4
-        FichierAudioJo.push(donne[28]);
-        }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
        if (donne[40] == 0) {//4
        FichierAudioJo.push(donne[36]); //front5
        FichierAudioJo.push(donne[37]);
@@ -1536,18 +1461,12 @@ switch (Number(donne[11])) {
          }//6 
         }//5
        }//4 fin fo nombd
-       if (donne[22] == 0) {//4
-        FichierAudioJo.push(donne[18]); //front3
-        FichierAudioJo.push(donne[19]);
-        FichierAudioJo.push(donne[27]); //front4
-        FichierAudioJo.push(donne[28]);
-        }
-       if (donne[22] != 0) {//4
-        FichierAudioJo.push(le7); //front3
-        FichierAudioJo.push(donne[19]);
-        FichierAudioJo.push(le8); //front4
-        FichierAudioJo.push(donne[28]);
-        }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
        if (donne[40] == 0) {//4
        FichierAudioJo.push(donne[36]); //front5
        FichierAudioJo.push(donne[37]);
@@ -1590,18 +1509,12 @@ switch (Number(donne[11])) {
 	  }//6 
          }//5
         }//4 fin fo nombd
-       if (donne[22] == 0) {//4
-        FichierAudioJo.push(donne[18]); //front3
-        FichierAudioJo.push(donne[19]);
-        FichierAudioJo.push(donne[27]); //front4
-        FichierAudioJo.push(donne[28]);
-        }
-       if (donne[22] != 0) {//4
-        FichierAudioJo.push(le7); //front3
-        FichierAudioJo.push(donne[19]);
-        FichierAudioJo.push(le8); //front4
-        FichierAudioJo.push(donne[28]);
-        }
+   letri1 = donne[22] == 0 ? donne[18] : le7;
+   FichierAudioJo.push(letri1); //front3
+   FichierAudioJo.push(donne[19]);
+   letri2 = donne[31] == 0 ? donne[27] : le8;
+   FichierAudioJo.push(letri2); //front4
+   FichierAudioJo.push(donne[28]);
        if (donne[40] == 0) {//4
        FichierAudioJo.push(donne[36]); //front5
        FichierAudioJo.push(donne[37]);
