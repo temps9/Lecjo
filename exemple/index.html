@@ -30,7 +30,7 @@ The adn.js file, see if each open HTML page contains data, called "donne1". If d
 <p>
 To add sound in an HTML page:
 You have to call the file adn.js
-Then you must change the value in the table named "donne" to control the different acoustic dimensions</p>
+Then you must change the value in the acoustic brick named "m1"... to control the different acoustic dimensions. Then it is necessary to position the acoustic bricks in "don". In the end, it is necessary to count how many acoustic bricks there are. You must change the last value of each brick that indicates how many bricks there are. Change the limit value in uiu, the number of bricks plus 1. Change the limit value in ui, the number of bricks</p>
 <h4>index.html</h4>
 <pre>
 &lt;!DOCTYPE html&gt;
@@ -48,40 +48,58 @@ Then you must change the value in the table named "donne" to control the differe
 </pre>
 <h4>adn.js</h4>
 <pre>
-var donne = [1, 220, 100, 0, 0, 0, 0, 0, 0, 30,
-100, 2, 0, 0, 0, 0, 0, 0, 0, 0,
+var m1 = [1, 220, 6, 9, 150, 3, 130, -1, 100, 30,
+6, 2, 150, 4, 128, -1, 100, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 200, 0, 0, 1];
+0, 30, 2, 2, 5];
+var m2 = [1, 220, 56, 0, 0, 0, 0, 0, 0, 30,
+45, 2, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 50, 0, 0, 5];
 
+var don = { 1: m1, 2: m1, 3: m2, 4: m2, 5: m1 }
 
-for(var i= 0; i < 75; i++)
+var total =new Array;
+var total1 =new Array;
+for(var uiu= 1; uiu &lt; 6; uiu++)
+{
+total[uiu -1] = "don"+[uiu]+"n";
+total1[uiu -1]=don[uiu];
+}
+
+for(var ui= 0; ui &lt; 5; ui++)
+{
+for(var i= 0; i &lt; 75; i++)
 {
 var nouveauinput;
 function ajouteElemen() {
-// crée un nouvel élément input
 var body   = document.body || document.getElementsByTagName('body')[0],
 nouveauinput  =  document.createElement("input");
 nouveauinput.setAttribute("type", "number");
-nouveauinput.setAttribute("id", ("donne"+i));
-nouveauinput.setAttribute("value", donne[i]);
+nouveauinput.setAttribute("id", total[ui]+i);
+nouveauinput.setAttribute("value", total1[ui][i]);
 nouveauinput.setAttribute("style", "display: none;");
-// ajoute l'élément qui vient d'être créé et son contenu au DOM
 body.insertBefore(nouveauinput,body.childNodes[0]);
-console.log("donne"+i);
-console.log(donne[i]);
 }  
 ajouteElemen();
 }
+}
 </pre>
-<h2>The values in the HTML page</h2>
+<h2>The values for building an acoustic brick, m1 and m2 in the example</h2>
 <p>
 indication:<br>
 44100 unit width is equal to 1 second.<br>
 The man can not hear over 40 musical notes per second.<br>
+An acoustic brick contains 75 numerical values, named from donne0 to donne74.<br>
+The possible values for the amplitude "height" are 30 to 220, for duration "width" from 2 to 250<br>
 <br>
 number of repetitions of the total form : donne71<br>
 number of Wave front: donne11<br>
@@ -91,9 +109,9 @@ Wave front 1 width: donne2<br>
 Wave front 1 height repeat: donne3<br>
 Wave front 1 width for height stays in place:: donne4<br>
 Wave front 1 number of stays in place: donne72<br>
-Wave front 1 height variation: donne5<br>
+Wave front 1 height variation subtracted: donne5<br>
 Wave front 1 limit of the height variation: donne6<br>
-Wave front 1 width variation: donne7<br>
+Wave front 1 width variation subtracted: donne7<br>
 Wave front 1 limit of the width variation: donne8<br>
 <br>
 Wave front 2 <br>
@@ -101,9 +119,9 @@ Wave front 2 height : donne9<br>
 Wave front 2 width:donne10<br>
 Wave front 2 width for height stays in place: donne12<br>
 Wave front 2 number of stays in place: donne73<br>
-Wave front 2 height variation: donne13<br>
+Wave front 2 height variation added : donne13<br>
 Wave front 2 limit of the height variation: donne14<br>
-Wave front 2 width variation: donne15<br>
+Wave front 2 width variation subtracted: donne15<br>
 Wave front 2 limit of the width variation: donne16<br>
 <br>
 Wave front 3 <br>
@@ -112,9 +130,9 @@ Wave front 3 height : donne18<br>
 Wave front 3 width: donne19<br>
 Wave front 3 height repeat: donne20<br>
 Wave front 3 width for height stays in place: donne21<br>
-Wave front 3 height variation: donne22<br>
+Wave front 3 height variation subtracted: donne22<br>
 Wave front 3 limit of the height variation: donne23<br>
-Wave front 3 width variation: donne24<br>
+Wave front 3 width variation subtracted : donne24<br>
 Wave front 3 limit of the width variation: donne25<br>
 <br>
 Wave front 4 <br>
@@ -123,9 +141,9 @@ Wave front 4 height : donne27<br>
 Wave front 4 width: donne28<br>
 Wave front 4 height repeat: donne29<br>
 Wave front 4 width for height stays in place:donne30<br>
-Wave front 4 height variation: donne31<br>
+Wave front 4 height variation added : donne31<br>
 limit of the height variation: donne32<br>
-width variation: donne33<br>
+width variation subtracted : donne33<br>
 limit of the width variation: donne34<br>
 <br>
 Wave front 5<br>
@@ -134,9 +152,9 @@ height : donne36<br>
 width: donne37<br>
 height repeat: donne38<br>
 width for height stays in place: donne39<br>
-height variation: donne40<br>
+height variation subtracted : donne40<br>
 limit of the height variation: donne41<br>
-width variation: donne42<br>
+width variation subtracted : donne42<br>
 limit of the width variation: donne43<br>
 <br>
 Wave front 6<br>
@@ -145,9 +163,9 @@ height : donne45<br>
 width: donne46<br>
 height repeat: donne47<br>
 width for height stays in place: donne48<br>
-height variation: donne49<br>
+height variation added : donne49<br>
 limit of the height variation: donne50<br>
-width variation: donne51<br>
+width variation subtracted: donne51<br>
 limit of the width variation: donne52<br>
 <br>
 Make surfing an audio<br>
@@ -176,16 +194,27 @@ Number of acoustic form : donne74<br>
 <a href="mailto:temps.jo@gmail.com">Contact et support: Joris Abadie</a><br><br>
 
 <div>
-<a href="example1.html">HOW to use plugin lecjo Example 1 : </a><br><br>
-<a href="example2.html">HOW to use plugin lecjo Example 2 : </a><br><br>
-<a href="example3.html">HOW to use plugin lecjo Example 3 : </a><br><br>
-<a href="example4.html">HOW to use plugin lecjo Example 4 : </a><br><br>
-<a href="example5.html">HOW to use plugin lecjo Example 5 : </a><br><br>
-<a href="example6.html">HOW to use plugin lecjo Example 6 : </a><br><br>
-<a href="example7.html">HOW to use plugin lecjo Example 7 : </a><br><br>
-<a href="example8.html">HOW to use plugin lecjo Example 8 : </a><br><br>
-<a href="example9.html">HOW to use plugin lecjo Example 9 : </a><br><br>
-<a href="example10.html">HOW to use plugin lecjo Example 10 : </a><br><br>
+<a href="example1.html">HOW to use plugin lecjo 2 fronts, without variation : </a><br><br>
+<a href="example2.html">HOW to use plugin lecjo hammer, amplitude variation 1 : </a><br><br>
+<a href="example3.html">HOW to use plugin lecjo hammer, amplitude variation 5 : </a><br><br>
+<a href="example4.html">HOW to use plugin lecjo hammer, amplitude variation 5 Force 3: </a><br><br>
+<a href="example5.html">HOW to use plugin lecjo hammer, amplitude variation 5/256 Force 6 : </a><br><br>
+<a href="example6.html">HOW to hammer, amplitude variation 5 Force 9 : </a><br><br>
+<a href="example7.html">HOW to hammer, amplitude variation 5 Force 1 Variation in duration 5 / 44100s : </a><br><br>
+<a href="example8.html">HOW to hammer, amplitude variation 5/256 
+Force by repetition of 1 
+Variation in duration, from 5 / 44100s 
+Force by plateau in duration, from 150 / 44100s:</a><br><br>
+<a href="example9.html">HOW to strong hammer, amplitude variation Force by repetition of 1 
+Variation in duration<br>
+plateau in duration: </a><br><br>
+<a href="example10.html">HOW to example of 144 acoustic bricks : </a><br><br>
+<a href="example11.html">HOW to unicorn, amplitude variation 5 Variation in duration 1 plateau in duration 28 and 21 : </a><br><br>
+<a href="example12.html">HOW to unicorn, amplitude variation 1 Variation in duration 1 plateau in duration 28 and 21 : </a><br><br>
+<a href="example13.html">HOW to unicorn, and back to inertia : </a><br><br>
+<a href="example14.html">HOW to unicorn, and back to inertia 2: </a><br><br>
+<a href="example15.html">HOW to compose: </a><br><br>
+<a href="Conference_LAC2017.html">tutoriel en français: </a><br><br>
 </div>
 </body>
 </html> 

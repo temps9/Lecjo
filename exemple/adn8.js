@@ -1,6 +1,4 @@
-var don1n =new Array;
-
-don1n = [1, 220, 10, 1, 50, 5, 130, -5, 250, 30,
+var m1 = [1, 220, 10, 1, 50, 5, 130, -5, 250, 30,
 10, 2, 50, 5, 128, -5, 250, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -9,10 +7,15 @@ don1n = [1, 220, 10, 1, 50, 5, 130, -5, 250, 30,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 30, 3, 3, 1];
 
-var total=new Array;
-total[0]="don1n";
-var total1=new Array;
-total1[0]=don1n;
+var don = { 1: m1 }
+
+var total =[];
+var total1 =[];
+for(var uiu= 1; uiu < 2; uiu++)
+{
+total[uiu -1] = "don"+[uiu]+"n";
+total1[uiu -1]=don[uiu];
+}
 
 for(var ui= 0; ui < 1; ui++)
 {

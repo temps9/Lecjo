@@ -4,34 +4,39 @@
 <meta charset="utf-8">
 </head>
 <body>
+<h1>Celtic unicorn, and back amplitude variation 1 <br>
+Variation in duration 1<br>
+plateau in duration 28 and 21</h1>
 
-<p> adn1.js with :</p>
+
+<p> adn11.js with :</p>
 <pre>
-var don1n =new Array;
-var don2n =new Array;
+var m1 = [1, 130, 42, 0, 28, -1, 220, 1, 7, 128,
+28, 2, 21, -1, 30, 1, 7, 0, 190, 80,
+0, 0, 0, 0, 0, 0, 0, 60, 60, 0,
+0, 0, 0, 0, 0, 0, 160, 80, 0, 0,
+0, 0, 0, 0, 0, 90, 60, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 90, 1, 1, 2];
+var m2 = [1, 220, 7, 0, 28, 1, 130, 0, 42, 30,
+7, 2, 21, 1, 128, 1, 28, 0, 190, 80,
+0, 0, 0, 0, 0, 0, 0, 60, 60, 0,
+0, 0, 0, 0, 0, 0, 160, 80, 0, 0,
+0, 0, 0, 0, 0, 90, 60, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 60, 1, 1, 2];
 
-don1n = [1, 220, 100, 0, 0, 1, 130, 0, 0, 30,
-100, 2, 0, 1, 220, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 100, 0, 0, 2];
+var don = { 1: m1, 2: m2 }
 
-don2n = [1, 220, 20, 0, 0, 1, 130, 0, 0, 30,
-180, 2, 0, 1, 220, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-0, 100, 0, 0, 2];
-
-var total=new Array;
-total[0]="don1n"; total[1]="don2n";
-var total1=new Array;
-total1[0]=don1n; total1[1]=don2n;
+var total =new Array;
+var total1 =new Array;
+for(var uiu= 1; uiu &lt; 3; uiu++)
+{
+total[uiu -1] = "don"+[uiu]+"n";
+total1[uiu -1]=don[uiu];
+}
 
 for(var ui= 0; ui &lt; 2; ui++)
 {
@@ -39,14 +44,12 @@ for(var i= 0; i &lt; 75; i++)
 {
 var nouveauinput;
 function ajouteElemen() {
-// crée un nouvel élément input
 var body   = document.body || document.getElementsByTagName('body')[0],
 nouveauinput  =  document.createElement("input");
 nouveauinput.setAttribute("type", "number");
 nouveauinput.setAttribute("id", total[ui]+i);
 nouveauinput.setAttribute("value", total1[ui][i]);
 nouveauinput.setAttribute("style", "display: none;");
-// ajoute l'élément qui vient d'être créé et son contenu au DOM
 body.insertBefore(nouveauinput,body.childNodes[0]);
 }  
 ajouteElemen();
@@ -56,7 +59,6 @@ ajouteElemen();
 
 <a href="mailto:temps.jo@gmail.com">Contact et support: Joris Abadie</a>
 <br><br>
-<div id='basewave1'> </div>
-<script type="text/javascript" src="adn1.js"></script>
+<script type="text/javascript" src="adn13.js"></script><br><br>
 </body>
 </html>
